@@ -214,6 +214,18 @@ int main( int argc, char* args[] )
           {
             quit = true;
           }
+          else if (e.type == SDL_KEYDOWN)
+          {
+            switch (e.key.keysym.sym)
+            {
+            case SDLK_ESCAPE:
+              quit = true;
+              break;
+            case SDLK_f:
+              SDL_MaximizeWindow(gWindow);
+              break;
+            }
+          }
         }
 
         //Clear screen
